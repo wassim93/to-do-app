@@ -9,7 +9,7 @@ const Input = () => {
     console.log(todo);
     dispatch(
       saveToDo({
-        item: todo,
+        name: todo,
         done: false,
         id: Date.now(),
       })
