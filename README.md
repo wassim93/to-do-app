@@ -1,3 +1,15 @@
+# TODO APP using react and redux store
+
+- React Js
+- Redux store
+- material ui
+
+Screenshot:
+
+Page UI
+
+<img src="https://github.com/wassim93/to-do-app/blob/master/Screenshot/home.PNG" width=50% height=50%>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
