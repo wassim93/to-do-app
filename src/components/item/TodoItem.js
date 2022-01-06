@@ -1,8 +1,14 @@
 import React from "react";
 import "../item/TodoItem.css";
 import { Checkbox } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { saveCheck } from "../../features/todoSlice";
+
 const TodoItem = ({ item }) => {
-  const handleCheck = () => {};
+  const dispatch = useDispatch();
+  const handleCheck = () => {
+    dispatch(saveCheck(item.id));
+  };
   return (
     <div className="todoItem">
       <Checkbox
@@ -12,7 +18,11 @@ const TodoItem = ({ item }) => {
         inputProps={{ "aria-label": "controlled" }}
       />
 
-      <p className={item.done && "todoItem--done"}>{item.name}</p>
+      {item.done ? (
+        <p className="todoItem--done">{item.name}</p>
+      ) : (
+        <p>{item.name}</p>
+      )}
     </div>
   );
 };
